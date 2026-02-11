@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  background-color: violet;
+  color: white;
+  text-align: center;
+}
+
+.a::before {
+  content: "⚽";
+}
+.b::before {
+  content: "🏏";
+}
+.c::before {
+  content: "🏒";
+}
+.d::before {
+  content: "🏀";
+}
+h2::before {
+  content: "Hello Players";
+  display: block;
+  background-color: rgb(20, 51, 62);
+  color: white;
+  text-align: center;
+  font-size: 20;
+}
+h2::after {
+  content: "Lets Play";
+  display: block;
+  background-color: rgb(20, 51, 62);
+  color: white;
+  text-align: center;
+  font-size: 20;
+}
