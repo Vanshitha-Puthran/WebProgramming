@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff8e7;
+}
+h1 {
+  color: darkgreen;
+}
+h2 {
+  color: #556b2f;
+}
+h3 {
+  color: #276527;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+ul {
+  background-color: #2e7d32;
+  position: sticky;
+  top: 0;
+}
+li {
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  background-color: #66bb6a;
+}
+ul li:hover {
+  background-color: #ff8c00;
+  color: white;
+  padding-left: 25px;
+  transition: 0.8s;
+}
