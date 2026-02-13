@@ -22,15 +22,7 @@ Used to create the structure of the web page such as headings, paragraphs, forms
 
 2. CSS (Cascading Style Sheets)
 
-Used to style the web pages including colors, layouts, fonts, spacing, and responsive design.
-
-3. JavaScript
-
-Used to add interactivity like form validation, dynamic content updates, and event handling.
-
-4. Backend (Optional)
-
-Languages like PHP, Python, or Node.js can be used for server-side processing and database connectivity.
+Used to style the web pages including colors, layouts, fonts, spacing, and responsive design
 
 📂 Project Structure
 /project-folder
