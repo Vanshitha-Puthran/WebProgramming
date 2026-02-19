@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Bulb Practical</title>
+  </head>
+  <body>
+    <img src="bulb-off.png" id="img1" />
+    <script>
+      function bulbon() {
+        document.getElementById("img1").src = "bulb-on.png";
+      }
+      function bulboff() {
+        document.getElementById("img1").src = "bulb-off.png";
+      }
+    </script>
+    <button type="button" onclick="bulbon()">Turn on</button>
+    <button type="button" onclick="bulboff()">Turn off</button>
+  </body>
+</html>
