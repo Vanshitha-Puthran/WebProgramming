@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Powers</title>
+  </head>
+  <body>
+    <h1>Square</h1>
+    <input type="text" id="value1" />
+    <button type="button" onclick="square()">Square</button>
+
+    <h1>Cube</h1>
+    <input type="text" id="value2" />
+    <button type="button" onclick="cube()">Cube</button>
+
+    <h1>Quadruple</h1>
+    <input type="text" id="value3" />
+    <button type="button" onclick="quadruple()">Quadruple</button>
+
+    <script>
+      function square() {
+        var a = document.getElementById("value1").value;
+        document.write("The square of " + a + " is " + a * a);
+      }
+      function cube() {
+        var b = document.getElementById("value2").value;
+        document.write("The cube of " + b + " is " + b * b * b);
+      }
+      function quadruple() {
+        var c = document.getElementById("value3").value;
+        document.write("The quadruple of " + c + " is " + c * c * c * c);
+      }
+    </script>
+  </body>
+</html>
