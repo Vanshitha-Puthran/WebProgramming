@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>OnBlur Event</title>
+    <style>
+      body {
+        background-color: lightblue;
+        text-align: center;
+        margin-top: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+        display: block;
+      }
+
+      input {
+        width: 20%;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid rgb(10, 7, 7);
+        border-radius: 5px;
+      }
+
+      .upperdata {
+        background-color: lightpink;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .lowerdata {
+        background-color: lightgreen;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function upperdate() {
+        var a = document.getElementById("input1");
+        a.value = a.value.toUpperCase();
+      }
+      function lowerdate() {
+        var b = document.getElementById("input2");
+        b.value = b.value.toLowerCase();
+      }
+    </script>
+    <h1>OnBlur Event</h1>
+    <input
+      type="text"
+      id="input1"
+      class="upperdata"
+      onblur="upperdate()"
+      placeholder="Capital letters Only"
+    />
+    <input
+      type="text"
+      id="input2"
+      class="lowerdata"
+      onblur="lowerdate()"
+      placeholder="Lowercase letters Only"
+    />
+  </body>
+</html>
