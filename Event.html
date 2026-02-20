@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>OnMouseOver and On MouseOut Events</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      img {
+        display: inline-block;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">OnMouseOver and OnMouseOut Events</h1>
+    <script>
+      function big_images(x) {
+        x.style.height = "600px";
+        x.style.width = "800px";
+      }
+      function small_images(x) {
+        x.style.height = "200px";
+        x.style.width = "400px";
+      }
+    </script>
+    <img
+      src="Mountain.jpg"
+      onmouseover="big_images(this)"
+      onmouseout="small_images(this)"
+    />
+    <img
+      src="Mountain2.jpg"
+      onmouseover="big_images(this)"
+      onmouseout="small_images(this)"
+    />
+  </body>
+</html>
