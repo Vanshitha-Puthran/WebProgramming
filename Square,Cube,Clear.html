@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square, Cube, Clear</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #e65c9c, #4a00e0);
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 400px;
+        padding: 35px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 10px groove rgba(255, 255, 255, 0.955);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        color: white;
+      }
+
+      h1 {
+        margin-bottom: 25px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+      }
+
+      input::placeholder {
+        color: #eee;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      button {
+        flex: 1;
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1.05);
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Square, Cube & Clear</h1>
+
+      <input type="text" id="num" placeholder="Enter a number" />
+
+      <div class="buttons">
+        <button onclick="Square()">Square</button>
+        <button onclick="Cube()">Cube</button>
+        <button onclick="clr()">Clear</button>
+      </div>
+
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function Square() {
+        var num = document.getElementById("num").value;
+        var square = num * num;
+        document.getElementById("result").innerText = square;
+      }
+
+      function Cube() {
+        var num = document.getElementById("num").value;
+        var cube = num * num * num;
+        document.getElementById("result").innerText = cube;
+      }
+
+      function clr() {
+        document.getElementById("num").value = "";
+        document.getElementById("result").innerText = "";
+      }
+    </script>
+  </body>
+</html>
