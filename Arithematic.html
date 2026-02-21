@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>Arithmetic Operations(Form)</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #8360c3, #2ebf91);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 420px;
+        padding: 30px;
+        border-radius: 15px;
+        background: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input {
+        width: 85%;
+        height: 35px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      input:focus {
+        border-color: #2ebf91;
+        box-shadow: 0 0 5px #2ebf91;
+      }
+
+      button {
+        width: 140px;
+        height: 40px;
+        margin: 8px;
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #2ebf91;
+        color: white;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #249c78;
+        transform: scale(1.05);
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #2ebf91;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <h1>Arithmetic Operations</h1>
+
+        <input type="text" placeholder="Enter Number 1" id="num1" />
+        <input type="text" placeholder="Enter Number 2" id="num2" />
+
+        <button type="button" onclick="Add()">Addition</button>
+        <button type="button" onclick="Sub()">Subtraction</button>
+        <button type="button" onclick="Mul()">Multiplication</button>
+        <button type="button" onclick="Div()">Division</button>
+        <button type="button" onclick="Rem()">Remainder</button>
+
+        <p id="result"></p>
+      </form>
+    </div>
+
+    <script>
+      function Add() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var sum = a + b;
+        document.getElementById("result").innerHTML = sum;
+      }
+      function Sub() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var diff = a - b;
+        document.getElementById("result").innerHTML = diff;
+      }
+      function Mul() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var mul = a * b;
+        document.getElementById("result").innerHTML = mul;
+      }
+      function Div() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var div = a / b;
+        document.getElementById("result").innerHTML = div;
+      }
+      function Rem() {
+        var a = parseInt(document.getElementById("num1").value);
+        var b = parseInt(document.getElementById("num2").value);
+        var rem = a % b;
+        document.getElementById("result").innerHTML = rem;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>OnLoad and OnError Events</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: lightyellow;
+        border: ridge rgb(10, 6, 6) 90px;
+      }
+      img {
+        display: block;
+        margin: 20px auto;
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Teddy Bear</h1>
+    <img src="Teddy.jpg" onload="image_load()" onerror="image_error()" />
+    <script>
+      function image_load() {
+        alert("Image loaded successfully!");
+      }
+      function image_error() {
+        alert("Error loading image!");
+      }
+    </script>
+  </body>
+</html>
