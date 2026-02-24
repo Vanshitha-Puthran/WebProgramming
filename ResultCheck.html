@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Result Check</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #fdf6f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        width: 450px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #444;
+        margin-bottom: 25px;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        font-size: 14px;
+        color: #666;
+      }
+
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        padding: 6px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      input:focus {
+        border-bottom: 2px solid #ff7a59;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        background: #ff7a59;
+        border: none;
+        color: white;
+        font-size: 15px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #e5674a;
+      }
+
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Check Result Status</h1>
+
+      <div class="input-group">
+        <label>English</label>
+        <input type="text" id="n1" />
+      </div>
+
+      <div class="input-group">
+        <label>Maths</label>
+        <input type="text" id="n2" />
+      </div>
+
+      <div class="input-group">
+        <label>Science</label>
+        <input type="text" id="n3" />
+      </div>
+
+      <div class="input-group">
+        <label>Kannada</label>
+        <input type="text" id="n4" />
+      </div>
+
+      <div class="input-group">
+        <label>Social</label>
+        <input type="text" id="n5" />
+      </div>
+
+      <button onclick="Check()">Check Result</button>
+
+      <div class="result">
+        <p id="result"></p>
+        <p id="result1"></p>
+        <p id="result2"></p>
+      </div>
+    </div>
+
+    <script>
+      function Check() {
+        var a = parseInt(document.getElementById("n1").value);
+        var b = parseInt(document.getElementById("n2").value);
+        var c = parseInt(document.getElementById("n3").value);
+        var d = parseInt(document.getElementById("n4").value);
+        var e = parseInt(document.getElementById("n5").value);
+
+        var total = a + b + c + d + e;
+        var prec = (total * 100) / 500;
+
+        document.getElementById("result").innerHTML =
+          "Total Marks: " + total + "<br>";
+
+        document.getElementById("result1").innerHTML =
+          "Percentage: " + prec + "%";
+
+        if (prec >= 90) {
+          document.getElementById("result2").innerHTML =
+            "Congratulations! You got Grade: A";
+        } else if (prec >= 80) {
+          document.getElementById("result2").innerHTML =
+            "Congratulations! You got Grade: B";
+        } else if (prec >= 70) {
+          document.getElementById("result2").innerHTML =
+            "Congratulations! You got Grade: C";
+        } else if (prec >= 60) {
+          document.getElementById("result2").innerHTML =
+            "Congratulations! You got Grade: D";
+        } else {
+          document.getElementById("result2").innerHTML =
+            "You got Grade:F Fail Better Luck Next Time!";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Switch Case</title>
+    <style>
+      body {
+        margin: 1;
+        padding: 1;
+      }
+      h1 {
+        background-color: darkgreen;
+        color: white;
+        text-align: center;
+      }
+      input {
+        margin: 10px;
+        padding: 5px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function check() {
+        var a = document.getElementById("n1").value;
+        switch (a) {
+          case "1":
+            document.write("Name:Rajesh <br> Marks:79% <br> Division:First");
+            break;
+          case "2":
+            document.write("Name:Ramesh <br> Marks:65% <br> Division:Second");
+            break;
+          case "3":
+            document.write("Name:Rahul <br> Marks:55% <br> Division:Third");
+            break;
+          case "4":
+            document.write("Name:Suresh <br> Marks:45% <br> Division:Fourth");
+            break;
+          case "5":
+            document.write("Name:Mahesh <br> Marks:35% <br> Division:Fifth");
+            break;
+          default:
+            document.write("Invalid Number");
+        }
+      }
+    </script>
+    <h1>Student Result</h1>
+    <form>
+      Enter Roll No:<input type="text" id="n1" />
+      <button type="button" onclick="check()">Check Result</button>
+    </form>
+  </body>
+</html>

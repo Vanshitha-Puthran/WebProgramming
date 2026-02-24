@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>If, Else, Else If</title>
+  </head>
+  <body>
+    <form>
+      Marks:<input type="text" id="marks" />
+      <button type="button" onclick="gradeCheck()">Check Grade</button>
+    </form>
+    <script>
+      function gradeCheck() {
+        var a = document.getElementById("marks").value;
+        if (a >= 90) {
+          document.write("Grade A");
+        } else if (a >= 80) {
+          document.write("Grade B");
+        } else if (a >= 70) {
+          document.write("Grade C");
+        } else if (a >= 60) {
+          document.write("Grade D");
+        } else {
+          document.write("Grade F");
+        }
+      }
+    </script>
+  </body>
+</html>
